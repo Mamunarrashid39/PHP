@@ -103,6 +103,7 @@
 </center>
 <div align="center" class="admission-from">
     <from>
+
           <div class="adm_int">
               <label class="label_text">Name</label>
               <input class="input_deg" type="text" name="">

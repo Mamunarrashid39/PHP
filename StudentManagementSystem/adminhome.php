@@ -27,5 +27,6 @@ elseif ($_SESSION['usertype']=='student')
 </head>
 <body>
 <h3>Admin Home</h3>
+<a href="logout.php">Logout</a>
 </body>
 </html>
