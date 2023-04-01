@@ -58,26 +58,12 @@ elseif ($_SESSION['usertype']!='student')
 
 <aside>
     <ul>
+
         <li>
-            <a href="">Admission</a>
+            <a href="">My Course</a>
         </li>
         <li>
-            <a href="">Add Teacher</a>
-        </li>
-        <li>
-            <a href="">view teacher</a>
-        </li>
-        <li>
-            <a href="">Add Student</a>
-        </li>
-        <li>
-            <a href="">View student</a>
-        </li>
-        <li>
-            <a href="">Add Courses</a>
-        </li>
-        <li>
-            <a href="">View Courses</a>
+            <a href="">My Result</a>
         </li>
     </ul>
 </aside>
@@ -85,13 +71,7 @@ elseif ($_SESSION['usertype']!='student')
 
 <div class="content">
 
-    <h1>Sidebar Accordion</h1>
 
-    <p>In this example, we have added an accordion and a dropdown menu inside the side navigation.
-
-        Click on both to understand how they differ from each other. The accordion will push down the content, while the dropdown lays over the content.</p>
-
-    <input type="text" name="">
 
 
 </div>
