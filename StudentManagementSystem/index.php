@@ -151,30 +151,30 @@
 
 <div align="center" class="admission_form">
 
-    <form>
+    <form action="data_cheak.php" method="POST">
 
         <div class="adm_int">
             <label class="label_text">Name</label>
-            <input class="input_deg" type="text" name="">
+            <input class="input_deg" type="text" name="name">
         </div>
 
         <div class="adm_int">
             <label class="label_text">Email</label>
-            <input class="input_deg" type="text" name="">
+            <input class="input_deg" type="text" name="email">
         </div>
 
         <div class="adm_int">
             <label class="label_text">Phone</label>
-            <input class="input_deg" type="text" name="">
+            <input class="input_deg" type="text" name="phone">
         </div>
         <div class="adm_int">
             <label class="label_text">Message</label>
-            <textarea class="input_txt"></textarea>
+            <textarea class="input_txt" name="message"></textarea>
         </div>
 
         <div class="adm_int" >
 
-            <input class="btn btn-primary" id="submit" type="submit" value="apply" >
+            <input class="btn btn-primary" id="submit" type="submit" value="apply" name="apply" >
         </div>
 
 
@@ -184,7 +184,7 @@
 
 
 <footer>
-    <h3 class="footer_text">All @copyright reserved by web tech knowledge</h3>
+    <h3 class="footer_text">All @2023</h3>
 </footer>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
