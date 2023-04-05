@@ -15,7 +15,7 @@
             <a href="add_student.php">Add Student</a>
         </li>
         <li>
-            <a href="">View student</a>
+            <a href="view_student.php">View student</a>
         </li>
         <li>
             <a href="">Add Teacher</a>

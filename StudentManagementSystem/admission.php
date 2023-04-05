@@ -17,12 +17,12 @@ $db="schoolproject";
 
 $data=mysqli_connect($host,$user,$password,$db);
 
-$sql="SELECT *from admission";
+$sql= "SELECT * FROM admission";
+
 $result=mysqli_query($data,$sql);
+
+
 ?>
-
-
-
 
 
 
@@ -71,18 +71,18 @@ include 'admin_sidebar.php';
 
                <tr>
                    <td style="padding: 20px">
-                       <?php echo "{$info['name']};" ?>
+                       <?php echo "{$info['name']}" ?>
                    </td>
                    <td style="padding: 20px">
-                       <?php echo "{$info['email']};" ?>
+                       <?php echo "{$info['email']}" ?>
 
                    </td>
                    <td style="padding: 20px">
-                       <?php echo "{$info['phone']};" ?>
+                       <?php echo "{$info['phone']}" ?>
 
                    </td>
                    <td style="padding: 20px;">
-                       <?php echo "{$info['message']};" ?>
+                       <?php echo "{$info['message']}" ?>
                    </td>
                </tr>
                <?php

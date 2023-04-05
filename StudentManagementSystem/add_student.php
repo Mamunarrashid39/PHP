@@ -13,6 +13,7 @@ $host="localhost";
 $user="root";
 $password="";
 $db="schoolproject";
+
 $data=mysqli_connect($host,$user,$password,$db);
 
 if(isset($_POST['add_student']))
@@ -24,8 +25,11 @@ if(isset($_POST['add_student']))
     $usertype="student";
 
     $check ="SELECT * FROM user WHERE username ='$username'";
+
     $check_user=mysqli_query($data ,$check);
+
     $row_count=mysqli_num_rows($check_user);
+
     if($row_count==1)
     {
         echo "username allready exist. try another one";
@@ -33,18 +37,19 @@ if(isset($_POST['add_student']))
     else
     {
 
-        $sql = "INSERT INTO user(username,email,phone,password) 
-values ('$username','$user_email','$user_phone','$usertype','$user_password')";
 
-        $result = mysqli_query($data, $sql);
+        $sql ="INSERT INTO user ('username','email','phone','usertype','password') values
+                        ($username,$user_email,$user_phone,$usertype,$user_password)";
+
+        $result =mysqli_query($data,$sql);
+
         if ($result) {
-            echo "Data uploaded succesfully";
+            echo "<script> console.log(alert(Data update successfull))  </script>";
         } else {
             echo "upload failed";
         }
     }
 }
-
 ?>
 
 
@@ -93,7 +98,7 @@ include 'admin_sidebar.php';
         <h1> Add Student</h1>
 
         <div class="dev_deg">
-            <form>
+            <form method="post">
                 <div>
                     <label>username</label>
                     <input type="text" name="name">

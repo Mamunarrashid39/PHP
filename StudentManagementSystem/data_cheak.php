@@ -9,11 +9,11 @@ $db="schoolproject";
 
 $data=mysqli_connect($host,$user,$password,$db);
 
- if ($data ===false)
+ if ($data === false)
  {
      die("connection error");
  }
- if(isset($_POST['applay']))
+ if(!isset($_POST['applay']))
  {
      $data_name=$_POST['name'];
      $data_email=$_POST['email'];
