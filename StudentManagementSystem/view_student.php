@@ -62,52 +62,60 @@ $result=mysqli_query($data,$sql);
 include 'admin_sidebar.php';
 
 ?>
+<center>
 
+    <div class="content">
 
-<div class="content">
+        <h1>Student Data</h1>
 
-    <h1>Student Data</h1>
+        <table border="1px">
+            <tr>
+                <th class="table_th">UserName</th>
+                <th class="table_th">Email</th>
+                <th class="table_th">Phone</th>
+                <th class="table_th">Password</th>
+                <th class="table_th">Delete</th>
 
-<table border="1px">
-    <tr>
-        <th class="table_th">UserName</th>
-        <th class="table_th">Email</th>
-        <th class="table_th">Phone</th>
-        <th class="table_th">password</th>
+            </tr>
 
-    </tr>
+            <?php
 
-    <?php
+            while ($info=$result->fetch_assoc())
 
-    while ($info=$result->fetch_assoc())
+            {
 
-    {
+                ?>
 
-    ?>
+                <tr>
+                    <td class="table_td">
+                        <?php echo " {$info['username']}";  ?>
+                    </td>
+                    <td class="table_td">
+                        <?php echo " {$info['email']}";  ?>
+                    </td>
+                    <td class="table_td">
+                        <?php echo " {$info['phone']}" ; ?>
+                    </td>
+                    <td class="table_td">
+                        <?php echo " {$info['password']}";  ?>
+                    </td>
+                    <td class="table_td">
+                        <?php echo " <a href='delete.php?student_id={$info['id']}'> Delete </a>";  ?>
+                    </td>
+                </tr>
 
-    <tr>
-        <td class="table_td">
-            <?php echo " {$info['username']}";  ?>
-        </td>
-        <td class="table_td">
-            <?php echo " {$info['email']}";  ?>
-        </td>
-        <td class="table_td">
-            <?php echo " {$info['phone']}" ; ?>
-        </td>
-        <td class="table_td">
-            <?php echo " {$info['password']}";  ?>
-        </td>
-    </tr>
-    <?php
+                <?php
 
-    }
+            }
 
-    ?>
+            ?>
 
-</table>
+        </table>
 
-</div>
+    </div>
+
+</center>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 

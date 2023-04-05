@@ -9,6 +9,7 @@ elseif ($_SESSION['usertype']=='student')
 {
     header("location:login.php");
 }
+
 $host="localhost";
 $user="root";
 $password="";
@@ -36,10 +37,7 @@ if(isset($_POST['add_student']))
     }
     else
     {
-
-
-        $sql ="INSERT INTO user ('username','email','phone','usertype','password') values
-                        ($username,$user_email,$user_phone,$usertype,$user_password)";
+        $sql = "INSERT INTO user (username,email,phone,usertype,password) values ('$username','$user_email','$user_phone','$usertype','$user_password')";
 
         $result =mysqli_query($data,$sql);
 
