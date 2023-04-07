@@ -68,6 +68,25 @@ include 'admin_sidebar.php';
 
         <h1>Student Data</h1>
 
+        <?php
+
+        if(isset($_SESSION["message"]))
+        {
+            echo $_SESSION["message"];
+            unset($_SESSION["message"]);
+        }
+
+
+//        if($_SESSION["message"])
+//        {
+//            echo $_SESSION['message'];
+//
+//        }
+//        unset($_SESSION['message']);
+
+        ?>
+        <br>
+
         <table border="1px">
             <tr>
                 <th class="table_th">UserName</th>
@@ -75,6 +94,8 @@ include 'admin_sidebar.php';
                 <th class="table_th">Phone</th>
                 <th class="table_th">Password</th>
                 <th class="table_th">Delete</th>
+                <th class="table_th">Update</th>
+
 
             </tr>
 
@@ -100,8 +121,14 @@ include 'admin_sidebar.php';
                         <?php echo " {$info['password']}";  ?>
                     </td>
                     <td class="table_td">
-                        <?php echo " <a href='delete.php?student_id={$info['id']}'> Delete </a>";  ?>
+                        <?php echo " <a onclick=\"JavaScript:return confirm('Are you sure to delete this');\" class='btn btn-danger' href='delete.php?student_id={$info['id']}'> Delete </a>";  ?>
                     </td>
+
+                    <td class="table_td">
+                        <?php echo " <a class='btn btn-primary' href='update_student.php?student_id={$info['id']}'> Update  </a>";  ?>
+                    </td>
+
+
                 </tr>
 
                 <?php

@@ -33,7 +33,7 @@ if(isset($_POST['add_student']))
 
     if($row_count==1)
     {
-        echo "username allready exist. try another one";
+        echo "Username allready exist. try another one";
     }
     else
     {
@@ -42,7 +42,7 @@ if(isset($_POST['add_student']))
         $result =mysqli_query($data,$sql);
 
         if ($result) {
-            echo "<script> console.log(alert(Data update successfull))  </script>";
+            echo "Data Update successfull" ;
         } else {
             echo "upload failed";
         }
