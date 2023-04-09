@@ -21,7 +21,7 @@
             <a href="admin_add_teacher.php">Add Teacher</a>
         </li>
         <li>
-            <a href="view_teacher.php">view teacher</a>
+            <a href="admin_view_teacher.php">view teacher</a>
         </li>
 
         <li>
