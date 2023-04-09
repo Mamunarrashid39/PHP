@@ -18,10 +18,10 @@
             <a href="view_student.php">View student</a>
         </li>
         <li>
-            <a href="">Add Teacher</a>
+            <a href="admin_add_teacher.php">Add Teacher</a>
         </li>
         <li>
-            <a href="">view teacher</a>
+            <a href="view_teacher.php">view teacher</a>
         </li>
 
         <li>

@@ -5,7 +5,7 @@ if(!isset($_SESSION['username']))
 {
     header("location:login.php");
 }
-elseif ($_SESSION['usertype']=='student')
+elseif ($_SESSION['usertype']=='teacher')
 {
     header("location:login.php");
 }
@@ -16,7 +16,7 @@ $db="schoolproject";
 
 $data=mysqli_connect($host,$user,$password,$db);
 
-$sql="SELECT * FROM user where usertype ='student'";
+$sql="SELECT * FROM user where usertype ='teacher'";
 
 $result=mysqli_query($data,$sql);
 
@@ -66,23 +66,23 @@ include 'admin_sidebar.php';
 
     <div class="content">
 
-        <h1>Student Data</h1>
+        <h1>Teacher Data</h1>
 
         <?php
 
         if(isset($_SESSION["message"]))
         {
             echo $_SESSION["message"];
+            unset($_SESSION["message"]);
         }
-        unset($_SESSION["message"]);
 
 
-//        if($_SESSION["message"])
-//        {
-//            echo $_SESSION['message'];
-//
-//        }
-//        unset($_SESSION['message']);
+        //        if($_SESSION["message"])
+        //        {
+        //            echo $_SESSION['message'];
+        //
+        //        }
+        //        unset($_SESSION['message']);
 
         ?>
 
@@ -127,7 +127,7 @@ include 'admin_sidebar.php';
                     </td>
 
                     <td class="table_td">
-                        <?php echo " <a class='btn btn-primary' href='update_student.php?student_id={$info['id']}'> Update </a>";  ?>
+                        <?php echo " <a class='btn btn-primary' href='update_student.php?teacher_id={$info['id']}'> Update </a>";  ?>
                     </td>
 
 
