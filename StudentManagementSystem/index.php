@@ -1,3 +1,38 @@
+<?php
+error_reporting(0);
+
+session_abort();
+
+session_destroy();
+
+if($_SESSION['message'])
+{
+    $message=$_SESSION['message'];
+    echo "<script type='text/css'> 
+            alert('$message');
+
+     </script>";
+
+}
+
+
+$host="localhost";
+$user="root";
+$password="";
+$db="schoolproject";
+
+$data=mysqli_connect($host,$user,$password,$db);
+
+$sql="SELECT * FROM teacher ";
+
+$result=mysqli_query($data,$sql);
+
+
+
+
+?>
+
+
 
 
 
@@ -72,27 +107,27 @@
 
     <div class="row">
 
-        <div class="col-md-4">
+        <?php
+        while ($info=$result->fetch_assoc())
 
-            <img class="teacher" src="image/teacher1.jpg">
+        {
 
-            <p>in a vibrant, academically challenging, and encouraging environment where manifold viewpoints are prized and celebrated.</p>
-
-        </div>
-
-        <div class="col-md-4">
-
-            <img class="teacher" src="image/teacher2.jpg">
-            <p>in a vibrant, academically challenging, and encouraging environment where manifold viewpoints are prized and celebrated.</p>
-
-        </div>
+        ?>
 
         <div class="col-md-4">
 
-            <img class="teacher" src="image/teacher3.jpg">
-            <p>in a vibrant, academically challenging, and encouraging environment where manifold viewpoints are prized and celebrated.</p>
+            <img class="teacher" src="<?php echo "{$info['image']}" ?>">
+
+            <h3><?php echo "{$info['name']}" ?></h3>
+            <h4><?php echo "{$info['description']}" ?></h4>
 
         </div>
+        <?php
+
+        }
+
+        ?>
+
 
 
     </div>
