@@ -59,8 +59,11 @@ $result=mysqli_query($data,$sql);
 
     <ul>
         <li><a href="">Home</a></li>
+
         <li><a href="">Contact</a></li>
+
         <li><a href="">Admission</a></li>
+
         <li><a href="login.php" class="btn btn-success">Login</a></li>
     </ul>
 </nav>
@@ -99,7 +102,7 @@ $result=mysqli_query($data,$sql);
 
 
 <center>
-    <h1>Our Teachers</h1>
+    <h1 >Our Teachers</h1>
 </center>
 
 
@@ -179,7 +182,7 @@ $result=mysqli_query($data,$sql);
 
 
 <center>
-    <h1 class="adm">Admission Form</h1>
+    <h1 <a href="#Admission">Admission Form </a></h1>
 
 </center>
 

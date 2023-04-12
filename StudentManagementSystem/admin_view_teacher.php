@@ -90,7 +90,8 @@ include 'admin_sidebar.php';
             <th class="table_th">Teacher Name</th>
             <th class="table_th">About Teacher</th>
             <th class="table_th">Image</th>
-            <th class="table_th">Action</th>
+            <th class="table_th">Delete</th>
+            <th class="table_th">Update</th>
         </tr>
 
         <?php
@@ -120,8 +121,15 @@ include 'admin_sidebar.php';
              
              </a> ";
 
-
             ?>
+            </td>
+            <td class="table_td">
+                <?php
+
+
+             echo "<a href='admin_update_teacher.php?teacher_id={$info['id']}' class='btn btn-primary'>Update</a>"
+
+                ?>
             </td>
 
 

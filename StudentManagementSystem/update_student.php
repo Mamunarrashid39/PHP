@@ -105,7 +105,7 @@ include 'admin_sidebar.php';
     <h1>Student Update</h1>
 
     <div class="dev_deg">
-        <from action="#" method="POST">
+    <form method="post">
             <div>
                 <label>username</label>
                 <input type="text" name="name"
